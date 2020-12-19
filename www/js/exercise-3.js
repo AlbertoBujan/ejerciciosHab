@@ -196,13 +196,22 @@ const cars = [
 // 7. ¡Bonus point! Obtén un array con todas las personas en el que cada persona tenga toda
 //  *       la info de su coche.
 
-// const personConCoche = persons.map((data) => {
-//   const copia = { ...data };
-//   const coches = cars.find((coche) => {
-//     return coche.id === copia.car;
-//   });
-//   copia.coche = coches;
-//   return copia;
-// });
+const personConCoche = persons.map((data) => {
+  const copia = { ...data };
+  const coches = cars.find((coche) => {
+    return coche.id === copia.car;
+  });
+  copia.coche = coches;
+  return copia;
+});
 
-// console.log(personConCoche);
+console.log(personConCoche);
+
+//  - 6. Obtén un array con las personas que tengan un coche de la marca Ford.
+// NOTA: HACIENDO PRIMERO EL 7 EL 6 ES LA RISA NO SE SI TE VALE ASI
+
+const personasConFord = personConCoche.filter((data) => {
+  return data.coche.brand === "Ford";
+});
+
+console.log(personasConFord);
