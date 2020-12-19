@@ -15,5 +15,18 @@
  * Resultado esperado: ["adipisicing", "amet", "consectetur", "dolor", "elit", "ipsum", "lorem", "sit"]
  *
  */
+"use strict";
+const text = "Lorem Ipsum Dolor Sit Amet Consectetur, ¡Adipisicing Elit!.";
 
-const text = 'Lorem Ipsum Dolor Sit Amet Consectetur, ¡Adipisicing Elit!.';
+function convert(text) {
+  return text
+    .replace(",", "")
+    .replace("¡", "")
+    .replace("!", "")
+    .replace(".", "")
+    .toLowerCase()
+    .split(" ")
+    .sort();
+}
+
+console.log(convert(text));
