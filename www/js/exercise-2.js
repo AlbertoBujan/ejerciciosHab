@@ -52,11 +52,15 @@ let data = `  "id", "m2", "antiguedad", "habitaciones", "baños", "amueblado", "
 149, 60, 11,  1, 1, false,  true
    `;
 
-const prueba = data.trim().split("\n");
+// const prueba = data.trim().split("\n");
 
-console.log(prueba);
+let csv = [];
+let fila = data.trim().split("\n");
+for (let i = 1; i < fila.length; i++) {
+  let data = fila[i].split(",").map((cosa) => {
+    return cosa.trim();
+  });
+  csv.push(data);
+}
 
-// function prueba(datos) {
-//   return datos.split("`");
-// }
-// console.log(prueba(pruebas));
+console.log(csv);
