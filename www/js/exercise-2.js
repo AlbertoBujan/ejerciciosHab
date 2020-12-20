@@ -39,7 +39,7 @@
  *
  */
 
-'use strict';
+"use strict";
 
 let data = `  "id", "m2", "antiguedad", "habitaciones", "baños", "amueblado", "ascensor"
 142, 88, 12, 3, 1, true,  false
@@ -51,3 +51,12 @@ let data = `  "id", "m2", "antiguedad", "habitaciones", "baños", "amueblado", "
 148, 160, 9,  5, 3, true,  true
 149, 60, 11,  1, 1, false,  true
    `;
+
+const prueba = data.trim().split("\n");
+
+console.log(prueba);
+
+// function prueba(datos) {
+//   return datos.split("`");
+// }
+// console.log(prueba(pruebas));

@@ -149,49 +149,50 @@ const cars = [
   },
 ];
 //  1. Obtén la suma total de todas las edades de las personas.
-// const sumaTotalEdades = persons.reduce((acu, edad) => {
-//   return (acu += edad.age);
-// }, 0);
+const sumaTotalEdades = persons.reduce((acu, edad) => {
+  return (acu += edad.age);
+}, 0);
 
-// console.log(sumaTotalEdades);
+console.log(sumaTotalEdades);
 
-// const edadesFrancesas = persons
-//   .filter((gente) => {
-//     return gente.country === "FR";
-//   })
-//   .reduce((acu, edad) => {
-//     return (acu += edad.age);
-//   }, 0);
-// console.log(edadesFrancesas);
+// 2. Obtén la suma total de todas las edades de las personas francesas.
+const edadesFrancesas = persons
+  .filter((gente) => {
+    return gente.country === "FR";
+  })
+  .reduce((acu, edad) => {
+    return (acu += edad.age);
+  }, 0);
+console.log(edadesFrancesas);
 
 // 3. Obtén un array con el nombre de todas las mascotas.
-// const nombreMascotas = persons.map((data) => {
-//   return data.pet.name;
-// });
+const nombreMascotas = persons.map((data) => {
+  return data.pet.name;
+});
 
-// console.log(nombreMascotas);
+console.log(nombreMascotas);
 
 // 4. Obtén un array con las personas que tengan gato.
 
-// const personasConGato = persons
-//   .filter((data) => {
-//     return data.pet.type === "gato";
-//   })
-//   .map((names) => {
-//     return names.name;
-//   });
-// console.log(personasConGato);
+const personasConGato = persons
+  .filter((data) => {
+    return data.pet.type === "gato";
+  })
+  .map((names) => {
+    return names.name;
+  });
+console.log(personasConGato);
 
 // 5. Obtén un array con los coches de los españoles.
-// const cochesDeLosEspañoles = persons
-//   .filter((data) => {
-//     return data.country === "ES";
-//   })
-//   .map((data) => {
-//     return data.car;
-//   });
+const cochesDeLosEspañoles = persons
+  .filter((data) => {
+    return data.country === "ES";
+  })
+  .map((data) => {
+    return data.car;
+  });
 
-// console.log(cochesDeLosEspañoles);
+console.log(cochesDeLosEspañoles);
 
 // 7. ¡Bonus point! Obtén un array con todas las personas en el que cada persona tenga toda
 //  *       la info de su coche.

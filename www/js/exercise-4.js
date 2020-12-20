@@ -22,6 +22,7 @@ async function municipiosLugo(url) {
   const dataResponse = await fetch(url);
   const datos = await dataResponse.json();
   const municipio = datos.municipios;
+  console.log(municipio);
   let array = [];
   municipio.map((data) => {
     array.push(data.NOMBRE);
